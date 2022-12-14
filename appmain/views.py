@@ -3,7 +3,7 @@ from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
-from product.models import Product, Category
+from appproduct.models import Product, Category
 
 from .forms import SignUpForm
 def index(request):

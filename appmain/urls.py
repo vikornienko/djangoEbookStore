@@ -2,7 +2,7 @@ from django.urls import path
 from django.contrib.auth import views
 
 from .views import index, signup, myaccount, edit_myaccount, shop
-from product.views import product
+from appproduct.views import product
 
 urlpatterns = [
     path('', index, name='index'),

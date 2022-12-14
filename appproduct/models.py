@@ -1,5 +1,5 @@
 from io import BytesIO
-from msilib.schema import File
+# from msilib.schema import File
 from PIL import Image
 from django.db import models
 
@@ -48,8 +48,6 @@ class Product(models.Model):
         img.convert('RGB')
         img.thumbnail(size)
         tbn_io = BytesIO()
-        img.save(tbn_io, 'JPEG', quality=85)
-
-        thumbnail = File(tbn_io, name=image.name)
+        thumbnail = img.save(tbn_io, 'JPEG', quality=85)
 
         return thumbnail

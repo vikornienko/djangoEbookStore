@@ -32,6 +32,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'
+
+SESSION_COOKIE_AGE = 86000
+CART_SESSION_ID = 'cart'
+
 
 # Application definition
 
@@ -43,6 +50,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'appmain.apps.AppmainConfig',
+    'appproduct.apps.AppproductConfig',
+    'appcart.apps.AppcartConfig',
+    'apporder.apps.ApporderConfig',
 ]
 
 MIDDLEWARE = [

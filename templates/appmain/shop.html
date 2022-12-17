@@ -1,4 +1,4 @@
-{% extends 'main/base.html' %}
+{% extends 'appmain/base.html' %}
 
 {% block title %}Shop{% endblock %}
 
@@ -32,7 +32,7 @@
 
     <div class="products w-full lg:w-3/4 -mt-4 flex items-center flex-wrap">
         {% for product in products %}
-            {% include 'product/add-ons/product_list_item.html' %}
+            {% include 'appproduct/add-ons/product_list_item.html' %}
         {% endfor %}
     </div>
 </div>

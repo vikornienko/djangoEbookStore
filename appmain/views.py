@@ -7,7 +7,8 @@ from appproduct.models import Product, Category
 
 from .forms import SignUpForm
 def index(request):
-    return render(request, 'appmain/index.html')
+    products = Product.objects.all()[0:8]
+    return render(request, 'appmain/index.html', {'products': products})
 
 def signup(request):
     if request.method == 'POST':
@@ -54,3 +55,5 @@ def shop(request):
         'products': products,
         'active_category': active_category
     }
+
+    return render(request, 'appmain/shop.html', context_page)
